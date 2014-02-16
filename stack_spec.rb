@@ -23,7 +23,18 @@ describe 'the stack' do
   end
 
   it 'throws an error if popping from an empty stack' do
-    # my_stack.pop
     expect { my_stack.pop }.to raise_error("Stack is empty!")
+  end
+
+  it 'is full if it is at the max_size' do
+    5.times do
+      my_stack.push('a')
+    end
+    expect(my_stack.full?).to be true
+  end
+
+  it 'throws an error if you try to add over the max_size' do
+    my_stack.push('a')
+    expect { my_stack.push('a') }.to raise_error("Stack is full!")
   end
 end

@@ -10,6 +10,7 @@ class Stack
   end
 
   def push(item)
+    raise "Stack is full!" if self.size > self.max_size
     @stack.push(item)
   end
 
@@ -20,6 +21,10 @@ class Stack
 
   def size
     @stack.size
+  end
+
+  def full?
+    @max_size <= @stack.length
   end
 end
 
