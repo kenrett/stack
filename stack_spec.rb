@@ -11,4 +11,9 @@ describe 'the stack' do
   it 'should have a maximum size' do
     expect(my_stack.max_size).to eq(5)
   end
+
+  it 'can have items added to it' do
+    my_stack.push("x")
+    expect(my_stack.size).to eq(1)
+  end
 end

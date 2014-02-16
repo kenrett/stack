@@ -12,5 +12,13 @@ class Stack
   def max_size
     @max_size
   end
+
+  def push(item)
+    @stack.push(item)
+  end
+
+  def size
+    @stack.size
+  end
 end
 
