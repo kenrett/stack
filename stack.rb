@@ -14,6 +14,7 @@ class Stack
   end
 
   def pop
+    raise "Stack is empty!" if @stack.size == 0
     @stack.pop
   end
 

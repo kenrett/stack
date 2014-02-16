@@ -21,4 +21,9 @@ describe 'the stack' do
     my_stack.pop
     expect(my_stack.size).to eq(0)
   end
+
+  it 'throws an error if popping from an empty stack' do
+    # my_stack.pop
+    expect { my_stack.pop }.to raise_error("Stack is empty!")
+  end
 end
