@@ -5,16 +5,16 @@ class Stack
     @max_size = max_size
   end
 
-  def empty?
-    @stack.length == 0
-  end
-
   def max_size
     @max_size
   end
 
   def push(item)
     @stack.push(item)
+  end
+
+  def pop
+    @stack.pop
   end
 
   def size

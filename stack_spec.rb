@@ -5,7 +5,7 @@ describe 'the stack' do
   my_stack = Stack.new(5);
   
   it 'should begin empty' do
-    expect(my_stack.empty?).to be true
+    expect(my_stack.size).to eq(0)
   end
 
   it 'should have a maximum size' do
@@ -15,5 +15,10 @@ describe 'the stack' do
   it 'can have items added to it' do
     my_stack.push("x")
     expect(my_stack.size).to eq(1)
+  end
+
+  it 'can have items removed from it' do
+    my_stack.pop
+    expect(my_stack.size).to eq(0)
   end
 end
